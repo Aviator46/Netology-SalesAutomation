@@ -5,15 +5,9 @@ public class SalesManager {
         this.sales = sales;
     }
 
-<<<<<<< HEAD
-    public long Max() {
-        long max = -1;
-        for (long sale : sales) {
-=======
     public long max() {
         long max = -1;
         for (long sale : sales) {
->>>>>>> longer
             if (sale > max) {
                 max = sale;
             }
