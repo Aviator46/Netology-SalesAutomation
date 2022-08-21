@@ -5,7 +5,7 @@ public class SalesManager {
         this.sales = sales;
     }
 
-    public int max() {
+    public int Max() {
         int max = -1;
         for (int sale : sales) {
             if (sale > max) {
@@ -15,7 +15,7 @@ public class SalesManager {
         return max;
     }
 
-    public int maxNum() {
+    public int MaxNum() {
         int maxNum = sales[0];
         for (int sale : sales) {
             if (sale > maxNum)
@@ -24,7 +24,7 @@ public class SalesManager {
         return maxNum;
     }
 
-    public int minNum() {
+    public int MinNum() {
         int minNum = sales[0];
         for (int sale : sales) {
             if (sale < minNum)
@@ -32,11 +32,11 @@ public class SalesManager {
         }
         return minNum;
     }
-    public int trimmMinMax () {
+    public int TrimmMinMax () {
         int sum = 0;
         for (int sale : sales) {
             sum += sale;
         }
-        return (sum - minNum() - maxNum()) / (sales.length - 2);
+        return (sum - MinNum() - MaxNum()) / (sales.length - 2);
     }
 }
