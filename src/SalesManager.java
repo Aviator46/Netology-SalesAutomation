@@ -1,13 +1,19 @@
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int Max() {
-        int max = -1;
-        for (int sale : sales) {
+<<<<<<< HEAD
+    public long Max() {
+        long max = -1;
+        for (long sale : sales) {
+=======
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
+>>>>>>> longer
             if (sale > max) {
                 max = sale;
             }
@@ -15,26 +21,26 @@ public class SalesManager {
         return max;
     }
 
-    public int MaxNum() {
-        int maxNum = sales[0];
-        for (int sale : sales) {
+    public long MaxNum() {
+        long maxNum = sales[0];
+        for (long sale : sales) {
             if (sale > maxNum)
                 maxNum = sale;
         }
         return maxNum;
     }
 
-    public int MinNum() {
-        int minNum = sales[0];
-        for (int sale : sales) {
+    public long MinNum() {
+        long minNum = sales[0];
+        for (long sale : sales) {
             if (sale < minNum)
                 minNum = sale;
         }
         return minNum;
     }
-    public int TrimmMinMax () {
-        int sum = 0;
-        for (int sale : sales) {
+    public long TrimmMinMax() {
+        long sum = 0;
+        for (long sale : sales) {
             sum += sale;
         }
         return (sum - MinNum() - MaxNum()) / (sales.length - 2);
