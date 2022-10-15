@@ -5,17 +5,7 @@ public class SalesManager {
         this.sales = sales;
     }
 
-    public long max() {
-        long max = -1;
-        for (long sale : sales) {
-            if (sale > max) {
-                max = sale;
-            }
-        }
-        return max;
-    }
-
-    public long MaxNum() {
+    public long maxNum() {
         long maxNum = sales[0];
         for (long sale : sales) {
             if (sale > maxNum)
@@ -24,7 +14,7 @@ public class SalesManager {
         return maxNum;
     }
 
-    public long MinNum() {
+    public long minNum() {
         long minNum = sales[0];
         for (long sale : sales) {
             if (sale < minNum)
@@ -37,6 +27,6 @@ public class SalesManager {
         for (long sale : sales) {
             sum += sale;
         }
-        return (sum - MinNum() - MaxNum()) / (sales.length - 2);
+        return (sum - minNum() - maxNum()) / (sales.length - 2);
     }
 }
